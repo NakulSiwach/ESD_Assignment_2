@@ -1,4 +1,14 @@
 package com.nakulsiwach.esd_2.dto;
 
-public class CustomerResponse {
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public record CustomerResponse(
+        @JsonProperty("first_name")
+        String firstName,
+        @JsonProperty("last_name")
+        String lastName,
+        @JsonProperty("email")
+        String email
+) {
 }
+
